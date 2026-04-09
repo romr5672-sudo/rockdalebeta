@@ -21,7 +21,6 @@
       </div>
       <div id="header-auth-user" class="header-auth" hidden>
         <button type="button" class="btn btn-ghost btn-sm" data-open-modal="cabinet">Кабинет</button>
-        <button type="button" class="btn btn-ghost btn-sm" id="header-logout">Выйти</button>
       </div>
     </div>
     <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
@@ -30,8 +29,8 @@
     <nav class="nav" aria-label="Основная навигация">
       <a href="#pricing">Тарифы</a>
       <a href="#features">Особенности</a>
-      <a href="#account">Кабинет</a>
-      <a href="#contact" class="nav-cta">Связь</a>
+      <a href="#contact" class="nav-cta" id="nav-link-contact">Связь</a>
+      <button type="button" class="nav-cta nav-cta--btn" id="nav-link-logout" hidden>Выйти</button>
     </nav>
   </header>
 

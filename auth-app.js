@@ -128,7 +128,8 @@ function init() {
   const el = {
     headerGuest: document.getElementById("header-auth-guest"),
     headerUser: document.getElementById("header-auth-user"),
-    headerLogout: document.getElementById("header-logout"),
+    navLinkContact: document.getElementById("nav-link-contact"),
+    navLinkLogout: document.getElementById("nav-link-logout"),
     accountGuestHint: document.getElementById("account-guest-hint"),
     accountLoggedTeaser: document.getElementById("account-logged-teaser"),
     userEmail: document.getElementById("user-email"),
@@ -268,6 +269,8 @@ function init() {
       }
       if (el.headerGuest) el.headerGuest.hidden = true;
       if (el.headerUser) el.headerUser.hidden = false;
+      if (el.navLinkContact) el.navLinkContact.hidden = true;
+      if (el.navLinkLogout) el.navLinkLogout.hidden = false;
       if (el.accountGuestHint) el.accountGuestHint.hidden = true;
       if (el.accountLoggedTeaser) el.accountLoggedTeaser.hidden = false;
       if (el.userEmail) el.userEmail.textContent = user.email || "";
@@ -284,14 +287,16 @@ function init() {
       paintMsg(el.msgCabinet, "");
       if (el.headerGuest) el.headerGuest.hidden = false;
       if (el.headerUser) el.headerUser.hidden = true;
+      if (el.navLinkContact) el.navLinkContact.hidden = false;
+      if (el.navLinkLogout) el.navLinkLogout.hidden = true;
       if (el.accountGuestHint) el.accountGuestHint.hidden = false;
       if (el.accountLoggedTeaser) el.accountLoggedTeaser.hidden = true;
       setCabinetDownloadVisible(false);
     }
   });
 
-  if (el.headerLogout) {
-    el.headerLogout.addEventListener("click", function () {
+  if (el.navLinkLogout) {
+    el.navLinkLogout.addEventListener("click", function () {
       signOut(auth);
     });
   }

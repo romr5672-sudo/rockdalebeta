@@ -26,6 +26,13 @@
     });
   });
 
+  var navLogout = document.getElementById("nav-link-logout");
+  if (navLogout) {
+    navLogout.addEventListener("click", function () {
+      setOpen(false);
+    });
+  }
+
   document.querySelectorAll("[data-open-modal]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       setOpen(false);

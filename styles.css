@@ -141,6 +141,13 @@ a {
   box-shadow: 0 0 20px var(--accent-dim);
 }
 
+.nav-cta--btn {
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
